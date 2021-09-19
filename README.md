@@ -1,0 +1,1 @@
+# vuexStoreB_test
