@@ -1,43 +1,36 @@
 <template>
   <div id="app">
-    <Navbar/>
-    <router-view/>
-    <Footer/>
+    <Navbar />
+    <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Navbar from '../src/components/Navbar.vue'
-import Footer from '../src/components/Footer.vue'
+import Navbar from "../src/components/Navbar.vue";
+import Footer from "../src/components/Footer.vue";
 export default {
-  name:"App",
+  name: "App",
   components: {
     Navbar,
-    Footer
-  }
-}
+    Footer,
+  },
+};
 </script>
 
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  // text-align: center;
-  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  height: 100vh;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+h1 {
+  font-family: 'Stick No Bills';
+  color: black;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>

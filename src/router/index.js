@@ -11,21 +11,19 @@ const routes = [
     component: Home
   },
   {
-    path: '/shoppingcar',
-    name: 'ShoppingCar',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/ShoppingCar.vue')
+    path: '/shoppingcart',
+    name: 'ShoppingCart',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ShoppingCart.vue')
   },
   {
     path: '/newproduct',
     name: 'NewProduct',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/NewProduct.vue')
-  }
+  },
+  {
+    path: '*',
+    redirect: Home
+  },
 ]
 
 const router = new VueRouter({

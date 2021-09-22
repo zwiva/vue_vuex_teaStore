@@ -3,6 +3,9 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+import { shopCartModule } from "../store/modules/shopcart.js";
+import { productsModule } from "../store/modules/products.js";
+
 export default new Vuex.Store({
   state: {
     //busqueda
@@ -17,7 +20,7 @@ export default new Vuex.Store({
         percentagediscount: 0.1, //*requerido
         // discountcolor: "pink",
         stock: 10, //*necesario
-        // imgurl: "../assets/img/tacita_blanco.png",
+        imgurl: "../assets/img/tacita_blanco.png",
       },
       {
         code: "00002",
@@ -28,7 +31,7 @@ export default new Vuex.Store({
         percentagediscount: 0.15,
         // discountcolor: "hotpink",
         stock: 10,
-        // imgurl: "../assets/img/tazon_unipanda.jpg",
+        imgurl: "../assets/img/tazon_unipanda.jpg",
       },
       {
         code: "00003",
@@ -39,7 +42,7 @@ export default new Vuex.Store({
         percentagediscount: 0.2,
         // discountcolor: "indianred",
         stock: 10,
-        // imgurl: "../assets/img/plato_gato.png",
+        imgurl: "../assets/img/plato_gato.png",
       },
       {
         code: "00004",
@@ -50,7 +53,7 @@ export default new Vuex.Store({
         percentagediscount: 0.15,
         // discountcolor: "hotpink",
         stock: 10,
-        // imgurl: "../assets/img/teteron_push.jpg",
+        imgurl: "../assets/img/teteron_push.jpg",
       },
       {
         code: "00005",
@@ -61,7 +64,7 @@ export default new Vuex.Store({
         percentagediscount: 0.1,
         // discountcolor: "pink",
         stock: 10,
-        // imgurl: "../assets/img/teterita_push.jpg",
+        imgurl: "../assets/img/teterita_push.jpg",
       },
       {
         code: "00006",
@@ -72,7 +75,7 @@ export default new Vuex.Store({
         percentagediscount: 0,
         // discountcolor: "transparent",
         stock: 10,
-        // imgurl: "../assets/img/cafetera_blanco.png",
+        imgurl: "../assets/img/cafetera_blanco.png",
       },
       {
         code: "00007",
@@ -83,7 +86,7 @@ export default new Vuex.Store({
         percentagediscount: 0.15,
         // discountcolor: "hotpink",
         stock: 10,
-        // imgurl: "../assets/img/mantel_fruta.png",
+        imgurl: "../assets/img/mantel_fruta.png",
       },
       {
         code: "00008",
@@ -94,7 +97,7 @@ export default new Vuex.Store({
         percentagediscount: 0.1,
         // discountcolor: "pink",
         stock: 10,
-        // imgurl: "../assets/img/cubiertos_color.png",
+        imgurl: "../assets/img/cubiertos_color.png",
       },
     ],
 
@@ -108,6 +111,10 @@ export default new Vuex.Store({
   },
   actions: {
     //acciones
+  },
+  modules: {
+    shopCart: shopCartModule,
+    products: productsModule
   },
 });
 
