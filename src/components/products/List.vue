@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>componente lista(borrar)</p>
+    <p>Aca va una lista</p>
     <ul v-for="(product, index) of products" :key="index">
       <li>{{product.code}} | {{product.category}}</li>
     </ul>

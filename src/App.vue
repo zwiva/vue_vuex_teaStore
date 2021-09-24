@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Navbar />
-    <router-view />
+    <div class="container py-5">
+      <router-view />
+    </div>
     <Footer />
   </div>
 </template>
@@ -26,11 +28,27 @@ export default {
   justify-items: center;
   height: 100vh;
   justify-content: space-between;
-  font-family: 'Poppins', sans-serif;
+  //font-family: "Poppins", sans-serif;
+  // font-family: 'Josefin Sans', sans-serif;
+  font-family: "Stick No Bills", sans-serif;
+  font-weight: 500;
+  padding-top: 5vh;
 }
 h1 {
-  font-family: 'Stick No Bills';
+  font-family: "Stick No Bills";
   color: black;
 }
 
+h3 {
+  color: rgb(167, 59, 119);
+}
+p {
+  margin: 0;
+  /* font-size: 0.75rem; */
+}
+.product__section {
+  text-align: start;
+  max-width: 720px;
+  /* background-color: rgb(255, 232, 244); */
+}
 </style>

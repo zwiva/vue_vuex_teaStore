@@ -1,7 +1,12 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-dark navbar__color-pink">
-      <router-link class="navbar-brand" style="font-family: 'Stick No Bills'" to="/"
+    <nav
+      class="navbar navbar-expand-lg navbar-dark navbar__color-pink fixed-top"
+    >
+      <router-link
+        class="navbar-brand"
+        style="font-family: 'Stick No Bills'"
+        to="/"
         >LATETE <img src="../assets/img/icon_taza.png" height="30px" alt="" />
       </router-link>
       <button
@@ -22,12 +27,17 @@
             <router-link class="nav-link" to="/">Inicio</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/newproduct"
+            <router-link class="nav-link" :to="{ name: 'AllProducts' }"
+              >Productos</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'NewProduct' }"
               >Nuevo producto</router-link
             >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/shoppingcart"
+            <router-link class="nav-link" :to="{ name: 'ShoppingCart' }"
               >Carrito</router-link
             >
           </li>
@@ -45,6 +55,6 @@ export default {
 
 <style>
 .navbar__color-pink {
-  background-color: rgb(255, 146, 182);
+  background-color: rgb(206, 111, 127);
 }
 </style>
