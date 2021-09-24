@@ -1,8 +1,8 @@
-STATUS: WIP 🚧👩‍💻👷‍♀️
+#STATUS: WIP 🚧👩‍💻👷‍♀️
+# pre-view: https://teateapot-storevue.netlify.app/  ✨👀✨
 
 # test_vue: vue2.x + router + vuex
 
-# view: https://teateapot-storevue.netlify.app/  ✨👀✨
 ## Project setup
 ```
 npm install
