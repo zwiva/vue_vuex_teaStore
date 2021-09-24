@@ -1,5 +1,6 @@
 # test_vue: vue2.x + router + vuex
 
+# view: https://teateapot-storevue.netlify.app/  ✨👀✨
 ## Project setup
 ```
 npm install
