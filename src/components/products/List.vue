@@ -1,8 +1,10 @@
 <template>
   <div>
+    <p>la maldita lista</p>
     <ul>
-      <li v-for="product of $store.state.products.allProducts" :key="product.code">
-        {{ product.code }} | {{ product.category }}
+      <li v-for="product of allproducts" :key="product.code">
+        {{ product.code }} | 
+        {{ product.category }}
       </li>
     </ul>
   </div>
@@ -14,6 +16,11 @@ export default {
   props: {
     allproducts: { type: Array, require: true },
   },
+  methods:{
+    showList() {
+      console.log('se muestra lista', this.allproducts);
+    }
+  }
 };
 </script>
 

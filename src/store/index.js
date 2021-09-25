@@ -16,10 +16,21 @@ export default new Vuex.Store({
   },
   mutations: {
     //gestionar acciones
+    // SET_SEARCH_PRODUCT(state, newSearch) {
+    //   state.searchproduct = newSearch;
+    //   console.log("ejecuta busqueda", state.searchproduct);
+    // },
 
   },
   actions: {
-    //acciones
+    // setSearchProduct(context, newSearch) {
+    //   if (typeof newSearch === "string") {
+    //     context.commit("products/SET_SEARCH_PRODUCT", newSearch);
+    //     console.log("ejecuta setBusqueda");
+    //   } else {
+    //     console.log("valor ingresado no es un string");
+    //   }
+    // },
 
   },
   modules: {

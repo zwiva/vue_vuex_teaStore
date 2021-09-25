@@ -96,11 +96,13 @@ export const productsModule = {
           "https://assets-vue-vuex-test.netlify.app/img/cubiertos_color.png",
       },
     ],
+    // filteredProducts: [],
   },
   getters: {
     //FindProduct
     findProduct(state) {
-      console.log('getter findproduct');
+      console.log('findproduct')
+      // filteredProducts = [];
       if (state.searchproduct === "") {
         return [];
       } else {
@@ -120,7 +122,7 @@ export const productsModule = {
     //SearchProduct
     SET_SEARCH_PRODUCT(state, newSearch) {
       state.searchproduct = newSearch;
-      console.log("ejecuta busqueda", state.searchproduct);
+      console.log('***', newSearch);
     },
   },
   actions: {
@@ -129,8 +131,12 @@ export const productsModule = {
       context.commit("ADD_PRODUCT", product);
     },
     //SearchProduct
-    setSearchProduct(context, newSearch) {
-      context.commit("SET_SEARCH_PRODUCT", newSearch);
+    setSearchProduct(context, search) {
+      if (typeof search === "string") {
+        context.commit("SET_SEARCH_PRODUCT", search);
+      } else {
+        console.log("valor ingresado no es un string");
+      }
     },
   },
 };

@@ -17,18 +17,21 @@
       </h4>
     </div>
     <!-- filtro de busqueda -->
-    <input type="text" class="input__home" 
-    placeholder="Escribe tu búsqueda"
-    :value="$store.state.products.search_product"
-    @input="$store.dispatch('products/setSearchProduct', $event.target.value)" />
+    <input
+      type="text"
+      class="input__home"
+      placeholder="Escribe tu búsqueda"
+      :value="$store.state.products.searchproduct"
+      @input="$store.dispatch('products/setSearchProduct', $event.target.value)"
+    />
     <hr />
-    <List v-if="!$store.state.products.search_product"
+   
+    <List
+      v-if="$store.state.products.searchproduct"
       :allproducts="$store.getters.findProduct"
     />
   </div>
-  <!-- typeof $store.state.products.search_product === 'string'
-      
-   -->
+  <!-- typeof $store.state.products.searchproduct === 'string' -->
 </template>
 
 <script>
