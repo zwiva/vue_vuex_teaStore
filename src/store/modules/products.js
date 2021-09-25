@@ -120,7 +120,7 @@ export const productsModule = {
       state.allProducts.push(newProduct);
     },
     //SearchProduct
-    SET_SEARCH_PRODUCT(state, newSearch) {
+    SET_SEARCHPRODUCT(state, newSearch) {
       state.searchproduct = newSearch;
       console.log('***', newSearch);
     },
@@ -133,7 +133,7 @@ export const productsModule = {
     //SearchProduct
     setSearchProduct(context, search) {
       if (typeof search === "string") {
-        context.commit("SET_SEARCH_PRODUCT", search);
+        context.commit("SET_SEARCHPRODUCT", search);
       } else {
         console.log("valor ingresado no es un string");
       }

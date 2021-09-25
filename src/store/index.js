@@ -3,7 +3,7 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
-import { shopCartModule } from "./modules/shopcart";
+import { shopcartModule } from "./modules/shopcart";
 import { productsModule } from "./modules/products";
 
 export default new Vuex.Store({
@@ -34,7 +34,7 @@ export default new Vuex.Store({
 
   },
   modules: {
-    shopCart: shopCartModule,
+    shopcart: shopcartModule,
     products: productsModule
   },
 });

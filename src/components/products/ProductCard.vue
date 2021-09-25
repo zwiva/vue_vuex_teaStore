@@ -16,7 +16,7 @@
         height="200px"
         alt="producto"
       />
-      <p class="card-text">Codigo: {{ product.name }}</p>
+      <p class="card-text">Nombre: {{ product.name }}</p>
       <p class="card-text">Codigo: {{ product.code }}</p>
       <p class="card-text">Color: {{ product.color }}</p>
       <p v-if="product.stock > 0" class="card-text">
@@ -30,7 +30,7 @@
           >- {{ product.discount }}%
         </span>
       </p>
-      <button href="#" class="">Comprar</button>
+      <button class="" @click="addProductCart">Comprar</button>
     </div>
   </div>
 </template>
@@ -40,6 +40,12 @@ export default {
   name: "ProductCard",
   props: {
     product: { type: Object, required: true },
+  },
+  methods: {
+    addProductCart() {
+      // console.log(this.product);
+      this.$store.dispatch("shopcart/addProductToCart", this.product);
+    },
   },
 };
 </script>

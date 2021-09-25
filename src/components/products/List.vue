@@ -16,11 +16,6 @@ export default {
   props: {
     allproducts: { type: Array, require: true },
   },
-  methods:{
-    showList() {
-      console.log('se muestra lista', this.allproducts);
-    }
-  }
 };
 </script>
 
