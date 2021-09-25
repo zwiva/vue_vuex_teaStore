@@ -1,8 +1,9 @@
 <template>
   <div>
-    <p>Aca va una lista</p>
-    <ul v-for="(product, index) of products" :key="index">
-      <li>{{product.code}} | {{product.category}}</li>
+    <ul>
+      <li v-for="product of $store.state.products.allProducts" :key="product.code">
+        {{ product.code }} | {{ product.category }}
+      </li>
     </ul>
   </div>
 </template>
@@ -11,7 +12,7 @@
 export default {
   name: "List",
   props: {
-    products: { type: Array, require: true },
+    allproducts: { type: Array, require: true },
   },
 };
 </script>

@@ -8,7 +8,6 @@ import { productsModule } from "./modules/products";
 
 export default new Vuex.Store({
   state: {
-    //busqueda
     //data productos
     //ventas
   },
@@ -17,9 +16,11 @@ export default new Vuex.Store({
   },
   mutations: {
     //gestionar acciones
+
   },
   actions: {
     //acciones
+
   },
   modules: {
     shopCart: shopCartModule,

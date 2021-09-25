@@ -1,9 +1,13 @@
 <template>
   <div id="app">
     <Navbar />
+
     <div class="container py-5">
-      <router-view />
+      <transition name="main__action" mode="out-in">
+        <router-view />
+      </transition>
     </div>
+
     <Footer />
   </div>
 </template>
@@ -50,5 +54,13 @@ p {
   text-align: start;
   max-width: 720px;
   /* background-color: rgb(255, 232, 244); */
+}
+.main__action-enter-active,
+.main__action-leave-active {
+  transition: opacity 0.25s;
+}
+.main__action-enter,
+.main__action-leave-to {
+  opacity: 0;
 }
 </style>

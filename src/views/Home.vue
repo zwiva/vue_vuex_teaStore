@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <h1 class="title_home">Tienda LATETETAZA</h1>
+    <h1 class="title_home">
+      Tienda LATETE<span class="title__color-main">TAZA</span>
+    </h1>
     <hr />
     <div>
       <h4>
@@ -15,22 +17,28 @@
       </h4>
     </div>
     <!-- filtro de busqueda -->
-    <input type="text" class="input__home" />
+    <input type="text" class="input__home" 
+    placeholder="Escribe tu búsqueda"
+    :value="$store.state.products.search_product"
+    @input="$store.dispatch('products/setSearchProduct', $event.target.value)" />
     <hr />
-
+    <List v-if="!$store.state.products.search_product"
+      :allproducts="$store.getters.findProduct"
+    />
   </div>
+  <!-- typeof $store.state.products.search_product === 'string'
+      
+   -->
 </template>
 
 <script>
-
-// import List from "../src/components/products/List.vue";
+import List from "../components/products/List.vue";
 
 export default {
   name: "Home",
   components: {
-    // List,
+    List,
   },
-  // en este componente se visualiza una lista y se acciona boton para comprar
 };
 </script>
 <style >
@@ -48,6 +56,9 @@ export default {
   /* font-weight: 800; */
 }
 
+.title__color-main {
+  color: rgb(206, 111, 127);
+}
 .input__home {
   min-width: 50%;
 }
