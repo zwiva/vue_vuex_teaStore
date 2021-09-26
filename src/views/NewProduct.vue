@@ -6,7 +6,7 @@
     <hr />
     <section class="product__section mx-auto">
       <form class="container" @submit.prevent="addNewProduct">
-        <div class="row ">
+        <div class="row">
           <div class="col-12 col-md-6">
             <div class="col pb-2">
               <label class="pr-2" for="name">Nombre </label>
@@ -164,13 +164,13 @@
     <section>
       <h3>Inventario vigente para vender:</h3>
       <hr />
-      <!-- <List :products="products" /> -->
+      <List :allproducts="$store.state.products.allProducts" :listmode="'stock_view'"/>
     </section>
   </div>
 </template>
 
 <script>
-// import List from "../components/products/List.vue";
+import List from "../components/products/List.vue";
 export default {
   // Object data for new product,
   data: () => ({
@@ -186,6 +186,9 @@ export default {
       imgurl: null,
     },
   }),
+  components: {
+    List,
+  },
   methods: {
     addNewProduct() {
       console.log("vista nuevo producto", this.product);

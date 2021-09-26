@@ -21,7 +21,7 @@
    
     <List
       v-if="$store.state.products.searchproduct"
-      :allproducts="$store.getters['products/findProduct']"
+      :allproducts="$store.getters['products/findProduct']" :listmode="'home'"
     />
   </div>
   <!-- typeof $store.state.products.searchproduct === 'string' -->

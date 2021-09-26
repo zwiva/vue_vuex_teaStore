@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="row footer__spacer">
-      <h5>Tienda tetetaza - 2021 🌸</h5>
+      <h5 class="p-4">Tienda tetetaza - 2021 🌸</h5>
     </div>
   </footer>
 </template>

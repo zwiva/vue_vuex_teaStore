@@ -6,14 +6,22 @@
         :key="product.code"
         class="item__list p-2 mx-auto"
       >
-        <span
-          ><span class="item__list-title">Categoria:</span>
-          {{ product.category }}</span
-        >
+        <span>
+          <span class="item__list-title">Categoria:</span>{{ product.category }}
+        </span>
+
         <span>
           <span class="item__list-title"> | Stock:</span> {{ product.stock }}
         </span>
-        <button>Comprar</button>
+
+        <span v-if="listmode==='stock_view'">
+          <span class="item__list-title"> | Color:</span> {{ product.color }}
+        </span>
+
+        <button>
+          <span v-if="listmode === 'home'">Comprar</span>
+          <span v-else>Vender</span>
+        </button>
       </li>
     </ul>
   </div>
@@ -24,6 +32,7 @@ export default {
   name: "List",
   props: {
     allproducts: { type: Array, require: true },
+    listmode: { type: String, default: "home" },
   },
 };
 </script>
