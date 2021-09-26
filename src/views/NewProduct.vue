@@ -3,6 +3,7 @@
     <h1>Inventario</h1>
     <!-- Add new product -->
     <h3 class="">Ingresar nuevo producto:</h3>
+    <hr>
     <section class="product__section mx-auto">
       <form @submit.prevent="addNewProduct">
         <div class="row">
@@ -152,7 +153,8 @@
           </div>
         </div>
         <div class="text-center m-3">
-          <button type="submit">Agregar nuevo producto</button>
+          <button class="add-product__button-text" type="submit">
+            Agregar nuevo producto</button>
         </div>
       </form>
     </section>
@@ -160,6 +162,7 @@
     <!-- See all products: old and new -->
     <section>
       <h3>Inventario vigente para vender:</h3>
+      <hr>
       <!-- <List :products="products" /> -->
     </section>
   </div>
@@ -213,5 +216,13 @@ select {
 input[type="text"],
 input[type="number"] {
   width: 7em;
+}
+.add-product__button {
+  flex-direction: row-reverse;
+  color: #4e4e4e;
+}
+.add-product__button-text:hover {
+  border-color: rgb(206, 111, 127);
+  color: rgb(206, 111, 127);
 }
 </style>

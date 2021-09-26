@@ -34,7 +34,9 @@
         </p>
       </div>
       <div class="row buy__button px-3">
-        <button class="" @click="addProductCart">Comprar</button>
+        <button class="buy__button-text" @click="addProductCart">
+          Comprar
+        </button>
       </div>
     </div>
   </div>
@@ -74,7 +76,12 @@ export default {
 .card-text {
   font-size: 0.8rem;
 }
-.buy__button{
+.buy__button {
   flex-direction: row-reverse;
+  color: #4e4e4e;
+}
+.buy__button-text:hover {
+  border-color: rgb(206, 111, 127);
+  color: rgb(206, 111, 127);
 }
 </style>

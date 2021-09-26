@@ -162,12 +162,4 @@ export default {
   border-radius: 5px;
 }
 
-@media (min-width: 576px) {
-  /* .items__cart { */
-  /* background-color: red; */
-  /* justify-content: space-between; */
-  /* } */
-  /* .item__cart { */
-  /* } */
-}
 </style>
