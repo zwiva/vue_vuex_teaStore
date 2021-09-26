@@ -90,7 +90,7 @@ export const productsModule = {
         price: 2500,
         havediscount: true,
         discount: 10,
-        stock: 10,
+        stock: 0,
         imgurl: "https://assets-vue-vuex-test.netlify.app/img/cubiertos_color.png",
       },
     ],

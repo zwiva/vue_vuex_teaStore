@@ -7,20 +7,20 @@
         class="item__list p-2 mx-auto"
       >
         <span>
-          <span class="item__list-title">Categoria:</span>{{ product.category }}
+          <span class="item__list-stock--title">Categoria:</span>{{ product.category }}
         </span>
 
         <span>
-          <span class="item__list-title"> | Stock:</span> {{ product.stock }}
+          <span class="item__list-stock--title"> | Stock:</span> {{ product.stock }}
         </span>
 
-        <span v-if="listmode==='stock_view'">
-          <span class="item__list-title"> | Color:</span> {{ product.color }}
+        <span v-if="!listmodehome">
+          <span class="item__list-stock--title"> | Color:</span> {{ product.color }}
         </span>
 
         <button>
-          <span v-if="listmode === 'home'">Comprar</span>
-          <span v-else>Vender</span>
+          <span v-if="listmodehome" @click="goToCart">Comprar</span>
+          <span v-else @click="toSell">Vender</span>
         </button>
       </li>
     </ul>
@@ -30,9 +30,18 @@
 <script>
 export default {
   name: "List",
+  methods:{
+    goToCart() {
+      this.$router.push("/allproducts")
+    },
+    toSell() {
+      console.log('vender y modificar inventario')
+    }
+
+  },
   props: {
     allproducts: { type: Array, require: true },
-    listmode: { type: String, default: "home" },
+    listmodehome: { type: Boolean, default: true },
   },
 };
 </script>
@@ -47,7 +56,16 @@ export default {
   width: 90%;
   justify-content: center;
 }
-.item__list-title {
+.item__list-home--title {
+  color: rgb(206, 111, 127);
+}
+.item__list-home--content {
+  color: rgb(206, 111, 127);
+}
+.item__list-stock--title {
+  color: rgb(206, 111, 127);
+}
+.item__list-stock--content {
   color: rgb(206, 111, 127);
 }
 @media (min-width: 576px) {

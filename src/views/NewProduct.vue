@@ -164,7 +164,7 @@
     <section>
       <h3>Inventario vigente para vender:</h3>
       <hr />
-      <List :allproducts="$store.state.products.allProducts" :listmode="'stock_view'"/>
+      <List :allproducts="$store.state.products.allProducts" :listmodehome="false"/>
     </section>
   </div>
 </template>
@@ -193,10 +193,6 @@ export default {
     addNewProduct() {
       console.log("vista nuevo producto", this.product);
       this.$store.dispatch("products/createNewProduct", { ...this.product });
-      alert(
-        "El producto se ha creado satisfactoriamente, sera redirigido a la vista de productos."
-      );
-      this.$router.push("/allproducts");
     },
   },
 };
