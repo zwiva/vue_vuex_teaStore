@@ -1,7 +1,7 @@
 <template>
   <div
     class="card"
-    style="width: 12rem; height: auto"
+    style="width: 10rem; height: auto"
     :class="{
       'ten-percent': product.discount === 10,
       'fifthteen-percent': product.discount === 15,
@@ -9,12 +9,12 @@
     }"
   >
     <div class="card-body">
-      <h5 class="card-title text-center">Categoría: {{ product.category }}</h5>
+      <h6 class="card-title text-center">Categoría: {{ product.category }}</h6>
       <img
         :src="product.imgurl"
         class="card-img-top"
         width="auto"
-        height="150px"
+        height="120px"
         alt="producto"
       />
       <div class="py-3">
@@ -26,7 +26,7 @@
         </p>
         <p v-else>No hay stock</p>
         <p class="card-text">
-          Precio: $ {{ product.price }}
+          Precio: $ {{ product.price.toLocaleString('de-DE') }}
 
           <span v-if="product.havediscount" class="card-text"
             >- {{ product.discount }}%
@@ -35,7 +35,7 @@
       </div>
       <div class="row buy__button px-3">
         <button class="buy__button-text" @click="addProductCart">
-          Comprar
+          Agregar a compra 
         </button>
       </div>
     </div>
@@ -79,6 +79,7 @@ export default {
 .buy__button {
   flex-direction: row-reverse;
   color: #4e4e4e;
+  font-size: 0.8em;
 }
 .buy__button-text:hover {
   border-color: rgb(206, 111, 127);

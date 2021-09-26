@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="container">
     <h1>Inventario</h1>
     <!-- Add new product -->
     <h3 class="">Ingresar nuevo producto:</h3>
-    <hr>
+    <hr />
     <section class="product__section mx-auto">
-      <form @submit.prevent="addNewProduct">
-        <div class="row">
+      <form class="container" @submit.prevent="addNewProduct">
+        <div class="row ">
           <div class="col-12 col-md-6">
             <div class="col pb-2">
               <label class="pr-2" for="name">Nombre </label>
@@ -154,7 +154,8 @@
         </div>
         <div class="text-center m-3">
           <button class="add-product__button-text" type="submit">
-            Agregar nuevo producto</button>
+            Agregar nuevo producto
+          </button>
         </div>
       </form>
     </section>
@@ -162,7 +163,7 @@
     <!-- See all products: old and new -->
     <section>
       <h3>Inventario vigente para vender:</h3>
-      <hr>
+      <hr />
       <!-- <List :products="products" /> -->
     </section>
   </div>
@@ -189,7 +190,9 @@ export default {
     addNewProduct() {
       console.log("vista nuevo producto", this.product);
       this.$store.dispatch("products/createNewProduct", { ...this.product });
-      alert("El producto se ha creado satisfactoriamente, sera redirigido a la vista de productos.");
+      alert(
+        "El producto se ha creado satisfactoriamente, sera redirigido a la vista de productos."
+      );
       this.$router.push("/allproducts");
     },
   },
@@ -199,6 +202,7 @@ export default {
 <style>
 label {
   color: #656565;
+  font-size: 0.8em;
 }
 .product__section {
   text-align: start;
@@ -207,6 +211,9 @@ label {
 }
 section {
   margin-bottom: 1.5em;
+}
+.form__section-align {
+  text-align-last: end;
 }
 input[type="text"],
 input[type="number"],

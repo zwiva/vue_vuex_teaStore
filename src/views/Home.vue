@@ -28,7 +28,7 @@
    
     <List
       v-if="$store.state.products.searchproduct"
-      :allproducts="$store.getters.findProduct"
+      :allproducts="$store.getters['products/findProduct']"
     />
   </div>
   <!-- typeof $store.state.products.searchproduct === 'string' -->

@@ -3,8 +3,14 @@ export const shopcartModule = {
   state: {
     inCartProducts: [],
   },
-  getters: {},
-
+  getters: {
+    shopCartTotalAmount(state) {
+      return state.inCartProducts.reduce((acum, product) => {
+        acum += product.price * (1 - product.discount / 100) * product.quantity;
+        return acum;
+      }, 0);
+    },
+  },
   mutations: {
     ADD_PRODUCT(state, newProductCart) {
       state.inCartProducts.push(newProductCart);
@@ -20,10 +26,13 @@ export const shopcartModule = {
     SUB_PRODUCT(state, productIndexFinded) {
       state.inCartProducts.splice(productIndexFinded, 1);
     },
-    ERASE_PRODUCT(state, productIndexFinded){
+    ERASE_PRODUCT(state, productIndexFinded) {
       state.inCartProducts.splice(productIndexFinded, 1);
-    }
-   },
+    },
+    CLEAR_CART(state) {
+      state.inCartProducts = [];
+    },
+  },
 
   actions: {
     addProductToCart(context, product) {
@@ -60,6 +69,18 @@ export const shopcartModule = {
       if (productIndex >= 0) {
         context.commit("ERASE_PRODUCT", productIndex);
       }
-    }
+    },
+    async buyCart(context) {
+      const delay = (ms) => {
+        return new Promise((resolve)=>{
+          setTimeout(() => {
+            resolve()
+            console.log('operacion ok')
+          }, ms);
+        })
+      }
+      await delay(3000);
+      context.commit("CLEAR_CART");
+    },
   },
 };

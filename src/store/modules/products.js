@@ -20,7 +20,7 @@ export const productsModule = {
         code: "00002",
         category: "tazon",
         color: "blanco",
-        price: 4000,
+        price: 5000,
         havediscount: true,
         discount: 15,
         stock: 10,
@@ -32,7 +32,7 @@ export const productsModule = {
         code: "00003",
         category: "plato",
         color: "blanco",
-        price: 4000,
+        price: 4500,
         havediscount: true,
         discount: 20,
         stock: 10,
@@ -43,7 +43,7 @@ export const productsModule = {
         code: "00004",
         category: "teteron",
         color: "blanco",
-        price: 4000,
+        price: 5500,
         havediscount: true,
         discount: 15,
         stock: 10,
@@ -54,7 +54,7 @@ export const productsModule = {
         code: "00005",
         category: "teterita",
         color: "rojo",
-        price: 4000,
+        price: 6000,
         havediscount: true,
         discount: 10,
         stock: 10,
@@ -65,35 +65,33 @@ export const productsModule = {
         code: "00006",
         category: "cafetera",
         color: "blanco",
-        price: 4000,
+        price: 7000,
         havediscount: false,
         discount: 0,
         stock: 10,
-        imgurl:
-          "https://assets-vue-vuex-test.netlify.app/img/cafetera_blanco.png",
+        imgurl: "https://assets-vue-vuex-test.netlify.app/img/cafetera_blanco.png",
       },
       {
         name: "mantel frutal",
         code: "00007",
         category: "mantel",
         color: "blanco",
-        price: 4000,
+        price: 7500,
         havediscount: true,
         discount: 15,
         stock: 10,
         imgurl: "	https://assets-vue-vuex-test.netlify.app/img/mantel_fruta.png",
       },
       {
-        name: "set cubiertos fantasia",
+        name: "set cubiertos",
         code: "00008",
         category: "cubiertos",
         color: "rosa",
-        price: 4000,
+        price: 2500,
         havediscount: true,
         discount: 10,
         stock: 10,
-        imgurl:
-          "https://assets-vue-vuex-test.netlify.app/img/cubiertos_color.png",
+        imgurl: "https://assets-vue-vuex-test.netlify.app/img/cubiertos_color.png",
       },
     ],
     // filteredProducts: [],
@@ -101,12 +99,10 @@ export const productsModule = {
   getters: {
     //FindProduct
     findProduct(state) {
-      console.log('findproduct')
-      // filteredProducts = [];
       if (state.searchproduct === "") {
         return [];
       } else {
-        return state.allproducts.filter((product) =>
+        return state.allProducts.filter((product) =>
           product.category
             .toLowerCase()
             .includes(state.searchproduct.toLowerCase())
@@ -122,7 +118,7 @@ export const productsModule = {
     //SearchProduct
     SET_SEARCHPRODUCT(state, newSearch) {
       state.searchproduct = newSearch;
-      console.log('***', newSearch);
+      console.log("***", newSearch);
     },
   },
   actions: {
