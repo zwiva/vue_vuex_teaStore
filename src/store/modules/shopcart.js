@@ -30,8 +30,16 @@ export const shopcartModule = {
       state.inCartProducts.splice(productIndexFinded, 1);
     },
     CLEAR_CART(state) {
-      state.inCartProducts = [];
+      console.log('CLEAR_CART -> lo que hay en el carrito', state);
+      // probar dispatch para enviar el state, enviando una accion para modificar el state de products.js
+
+
+
+//////////////////
+      // descomentar despues:
+      // state.inCartProducts = [];
     },
+
   },
 
   actions: {
@@ -82,5 +90,12 @@ export const shopcartModule = {
       await delay(3000);
       context.commit("CLEAR_CART");
     },
+
+
+////////////////
+
+    toSellProduct(context, product){
+      console.log('quiero vender', product);
+    }
   },
 };

@@ -69,7 +69,8 @@ export const productsModule = {
         havediscount: false,
         discount: 0,
         stock: 7,
-        imgurl: "https://assets-vue-vuex-test.netlify.app/img/cafetera_blanco.png",
+        imgurl:
+          "https://assets-vue-vuex-test.netlify.app/img/cafetera_blanco.png",
       },
       {
         name: "mantel frutal",
@@ -91,7 +92,8 @@ export const productsModule = {
         havediscount: true,
         discount: 10,
         stock: 0,
-        imgurl: "https://assets-vue-vuex-test.netlify.app/img/cubiertos_color.png",
+        imgurl:
+          "https://assets-vue-vuex-test.netlify.app/img/cubiertos_color.png",
       },
     ],
   },
@@ -119,6 +121,12 @@ export const productsModule = {
       state.searchproduct = newSearch;
       console.log("***", newSearch);
     },
+
+/////////////////
+
+    EDIT_PRODUCT(state, newShopCart) {
+      console.log('EDIT_PRODUCT', state, newShopCart);
+    },
   },
   actions: {
     //NewProduct
@@ -132,6 +140,11 @@ export const productsModule = {
       } else {
         console.log("valor ingresado no es un string");
       }
+    },
+
+/////////////////
+    changeInventory(context, sell) {
+      console.log('changeInventory', context, sell)
     },
   },
 };

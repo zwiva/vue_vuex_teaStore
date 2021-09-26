@@ -36,6 +36,8 @@ export default {
     },
     toSell() {
       console.log('vender y modificar inventario')
+      // registrar un proceso de compra, metiendo los productos al carrito: lo mismo que el 
+      // $emit('shopcart/...', product)
     }
 
   },
