@@ -1,7 +1,7 @@
 <template>
   <div
-    class="card m-2"
-    style="width: 14rem; height: auto"
+    class="card"
+    style="width: 12rem; height: auto"
     :class="{
       'ten-percent': product.discount === 10,
       'fifthteen-percent': product.discount === 15,
@@ -12,25 +12,30 @@
       <h5 class="card-title text-center">Categoría: {{ product.category }}</h5>
       <img
         :src="product.imgurl"
-        class="card-img-top p-3"
-        height="200px"
+        class="card-img-top"
+        width="auto"
+        height="150px"
         alt="producto"
       />
-      <p class="card-text">Nombre: {{ product.name }}</p>
-      <p class="card-text">Codigo: {{ product.code }}</p>
-      <p class="card-text">Color: {{ product.color }}</p>
-      <p v-if="product.stock > 0" class="card-text">
-        Existencias: {{ product.stock }}
-      </p>
-      <p v-else>No hay stock</p>
-      <p class="card-text">
-        Precio: $ {{ product.price }}
+      <div class="py-3">
+        <p class="card-text">Nombre: {{ product.name }}</p>
+        <p class="card-text">Codigo: {{ product.code }}</p>
+        <p class="card-text">Color: {{ product.color }}</p>
+        <p v-if="product.stock > 0" class="card-text">
+          Existencias: {{ product.stock }}
+        </p>
+        <p v-else>No hay stock</p>
+        <p class="card-text">
+          Precio: $ {{ product.price }}
 
-        <span v-if="product.havediscount" class="card-text"
-          >- {{ product.discount }}%
-        </span>
-      </p>
-      <button class="" @click="addProductCart">Comprar</button>
+          <span v-if="product.havediscount" class="card-text"
+            >- {{ product.discount }}%
+          </span>
+        </p>
+      </div>
+      <div class="row buy__button px-3">
+        <button class="" @click="addProductCart">Comprar</button>
+      </div>
     </div>
   </div>
 </template>
@@ -65,5 +70,11 @@ export default {
 .card {
   border: none;
   border-radius: 0;
+}
+.card-text {
+  font-size: 0.8rem;
+}
+.buy__button{
+  flex-direction: row-reverse;
 }
 </style>

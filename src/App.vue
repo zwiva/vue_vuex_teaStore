@@ -40,23 +40,24 @@ export default {
 }
 h1 {
   font-family: "Stick No Bills";
-  color: black;
+  color: #4e4e4e;
+  text-align: center;
 }
 
 h3 {
-  color: rgb(167, 59, 119);
+  color: rgb(206, 111, 127);
 }
 p {
   margin: 0;
   /* font-size: 0.75rem; */
+  color: #4e4e4e;
 }
 .product__section {
   text-align: start;
   /* background-color: rgb(255, 232, 244); */
 }
 .main__app {
-  max-width: 720px;
-
+  max-width: 768px;
 }
 .main__action-enter-active,
 .main__action-leave-active {
@@ -66,4 +67,6 @@ p {
 .main__action-leave-to {
   opacity: 0;
 }
+
+
 </style>

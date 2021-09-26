@@ -3,9 +3,7 @@ export const shopcartModule = {
   state: {
     inCartProducts: [],
   },
-  getters: {
-
-  },
+  getters: {},
 
   mutations: {
     ADD_PRODUCT(state, newProductCart) {
@@ -13,15 +11,55 @@ export const shopcartModule = {
       console.log("en el carrito", state.inCartProducts);
       console.log("state", state);
     },
-  },
+    ADD_QUANTITY(state, productIndexFinded) {
+      state.inCartProducts[productIndexFinded].quantity++;
+    },
+    SUB_QUANTITY(state, productIndexFinded) {
+      state.inCartProducts[productIndexFinded].quantity--;
+    },
+    SUB_PRODUCT(state, productIndexFinded) {
+      state.inCartProducts.splice(productIndexFinded, 1);
+    },
+    ERASE_PRODUCT(state, productIndexFinded){
+      state.inCartProducts.splice(productIndexFinded, 1);
+    }
+   },
 
   actions: {
     addProductToCart(context, product) {
-      // console.log(context, product)
-      // eslint-disable-next-line no-unused-vars
-      const { stock, ...inCartProduct } = product;
-      context.commit("ADD_PRODUCT", { ...inCartProduct, quantity: 1 });
-  
+      const productIndex = context.state.inCartProducts.findIndex(
+        (productInCart) => productInCart.code === product.code
+      );
+      if (productIndex === -1) {
+        // no in cart
+        // eslint-disable-next-line no-unused-vars
+        const { stock, ...inCartProduct } = product;
+        context.commit("ADD_PRODUCT", { ...inCartProduct, quantity: 1 });
+      } else {
+        //in cart
+        context.commit("ADD_QUANTITY", productIndex);
+      }
     },
+    subProductInCart(context, product) {
+      const productIndex = context.state.inCartProducts.findIndex(
+        (productInCart) => productInCart.code === product.code
+      );
+      console.log(productIndex);
+      if (productIndex >= 0) {
+        if (context.state.inCartProducts[productIndex].quantity > 1) {
+          context.commit("SUB_QUANTITY", productIndex);
+        } else {
+          context.commit("SUB_PRODUCT", productIndex);
+        }
+      }
+    },
+    eraseProductOfCart(context, product) {
+      const productIndex = context.state.inCartProducts.findIndex(
+        (productInCart) => productInCart.code === product.code
+      );
+      if (productIndex >= 0) {
+        context.commit("ERASE_PRODUCT", productIndex);
+      }
+    }
   },
 };

@@ -6,11 +6,12 @@
       <p>Nombre | Categoria | Color | Oferta | %oferta | Stock | Cantidad</p>
     </div> -->
 
-    <div v-if="$store.state.shopcart.inCartProducts.length">
+    <div v-if="$store.state.shopcart.inCartProducts.length" >
       <ProductCard
         v-for="(product, index) in $store.state.shopcart.inCartProducts"
         :key="index"
         :product="product"
+        class="mt-3"
       />
       
       <h3>Total a pagar:</h3>

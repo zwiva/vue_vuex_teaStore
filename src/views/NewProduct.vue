@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Iinventario</h1>
+    <h1>Inventario</h1>
     <!-- Add new product -->
     <h3 class="">Ingresar nuevo producto:</h3>
     <section class="product__section mx-auto">
