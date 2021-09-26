@@ -2,7 +2,7 @@
   <div id="app">
     <Navbar />
 
-    <div class="container py-5">
+    <div class="container py-5 main__app">
       <transition name="main__action" mode="out-in">
         <router-view />
       </transition>
@@ -52,8 +52,11 @@ p {
 }
 .product__section {
   text-align: start;
-  max-width: 720px;
   /* background-color: rgb(255, 232, 244); */
+}
+.main__app {
+  max-width: 720px;
+
 }
 .main__action-enter-active,
 .main__action-leave-active {

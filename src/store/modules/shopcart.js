@@ -11,6 +11,7 @@ export const shopcartModule = {
     ADD_PRODUCT(state, newProductCart) {
       state.inCartProducts.push(newProductCart);
       console.log("en el carrito", state.inCartProducts);
+      console.log("state", state);
     },
   },
 
