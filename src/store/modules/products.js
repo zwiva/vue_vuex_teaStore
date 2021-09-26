@@ -11,7 +11,7 @@ export const productsModule = {
         price: 4000, //*necesario
         havediscount: true, //*requerido
         discount: 10, //*requerido
-        stock: 10, //*necesario
+        stock: 20, //*necesario
         imgurl:
           "https://assets-vue-vuex-test.netlify.app/img/tacita_blanco.png",
       },
@@ -23,7 +23,7 @@ export const productsModule = {
         price: 5000,
         havediscount: true,
         discount: 15,
-        stock: 10,
+        stock: 18,
         imgurl:
           "https://assets-vue-vuex-test.netlify.app/img/tazon_unipanda.jpg",
       },
@@ -35,7 +35,7 @@ export const productsModule = {
         price: 4500,
         havediscount: true,
         discount: 20,
-        stock: 10,
+        stock: 12,
         imgurl: "https://assets-vue-vuex-test.netlify.app/img/plato_gato.png",
       },
       {
@@ -46,7 +46,7 @@ export const productsModule = {
         price: 5500,
         havediscount: true,
         discount: 15,
-        stock: 10,
+        stock: 5,
         imgurl: "https://assets-vue-vuex-test.netlify.app/img/teteron_cat.jpg",
       },
       {
@@ -57,7 +57,7 @@ export const productsModule = {
         price: 6000,
         havediscount: true,
         discount: 10,
-        stock: 10,
+        stock: 8,
         imgurl: "https://assets-vue-vuex-test.netlify.app/img/teterita_cat.jpg",
       },
       {
@@ -68,7 +68,7 @@ export const productsModule = {
         price: 7000,
         havediscount: false,
         discount: 0,
-        stock: 10,
+        stock: 7,
         imgurl: "https://assets-vue-vuex-test.netlify.app/img/cafetera_blanco.png",
       },
       {
@@ -79,7 +79,7 @@ export const productsModule = {
         price: 7500,
         havediscount: true,
         discount: 15,
-        stock: 10,
+        stock: 16,
         imgurl: "	https://assets-vue-vuex-test.netlify.app/img/mantel_fruta.png",
       },
       {
@@ -94,7 +94,6 @@ export const productsModule = {
         imgurl: "https://assets-vue-vuex-test.netlify.app/img/cubiertos_color.png",
       },
     ],
-    // filteredProducts: [],
   },
   getters: {
     //FindProduct

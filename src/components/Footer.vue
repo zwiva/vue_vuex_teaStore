@@ -1,6 +1,8 @@
 <template>
   <footer>
-    <h6>Tienda tetetaza - 2021</h6>
+    <div class="row footer__spacer">
+      <h5>Tienda tetetaza - 2021 🌸</h5>
+    </div>
   </footer>
 </template>
 
@@ -12,11 +14,15 @@ export default {
 
 <style>
 footer {
-  height: 10vh;
+  height: 5em;
   display: flex;
   justify-content: center;
   text-align: center;
   background-color: pink;
   color: gray;
+  vertical-align: center;
+}
+.footer__spacer {
+  align-self: center;
 }
 </style>

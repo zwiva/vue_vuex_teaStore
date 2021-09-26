@@ -6,14 +6,7 @@
     <hr />
     <div>
       <h4>
-        Buscar producto
-        <img
-          src="../assets/img/icon_tetera.png"
-          height="50"
-          width="50"
-          alt=""
-        />
-        :
+        Buscar producto ☕ :
       </h4>
     </div>
     <!-- filtro de busqueda -->

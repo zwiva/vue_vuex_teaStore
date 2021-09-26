@@ -35,7 +35,7 @@
       </div>
       <div class="row buy__button px-3">
         <button class="buy__button-text" @click="addProductCart">
-          Agregar a compra 
+          Agregar a carrito 
         </button>
       </div>
     </div>
