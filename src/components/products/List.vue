@@ -5,6 +5,7 @@
         v-for="product of allproducts"
         :key="product.code"
         class="item__list mx-auto p-1 m-2"
+        :class="{ 'p-3': listmodehome, 'py-3': !listmodehome }"
       >
         <div class="row item__list mx-auto">
           <div class="col-4 col-item col-item-center">
@@ -160,17 +161,14 @@ p.item__list {
     display: none;
   }
   .img__item {
-    height: 60px;
+    height: 100px;
   }
   .inventory-btn__section {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
   }
 }
 @media (min-width: 576px) {
-  .item__list {
-    width: 75%;
-  }
   .col-item-btn {
     width: 120px;
   }

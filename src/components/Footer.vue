@@ -3,11 +3,7 @@
     <div class="row footer__spacer">
       <h5 class="p-4">
         <img src="../assets/img/icon_cup_logo.svg" height="20px" alt="" />
-        <img src="../assets/img/icon_cup_logo.svg" height="20px" alt="" />
-        <img src="../assets/img/icon_cup_logo.svg" height="20px" alt="" />
         Tienda T E T E T A Z A - 2021
-        <img src="../assets/img/icon_cup_logo.svg" height="20px" alt="" />
-        <img src="../assets/img/icon_cup_logo.svg" height="20px" alt="" />
         <img src="../assets/img/icon_cup_logo.svg" height="20px" alt="" />
       </h5>
     </div>
