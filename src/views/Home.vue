@@ -6,14 +6,14 @@
     <hr />
     <div>
       <h4>
-        Buscar producto ☕ :
+        Buscar producto <img src="../assets/img/icon_cup_logo.svg" height="30px" alt="" />:
       </h4>
     </div>
     <!-- filtro de busqueda -->
     <input
       type="text"
       class="input__home"
-      placeholder="Escribe tu búsqueda"
+      placeholder="Escribe tu búsqueda, ejemplo taza..."
       :value="$store.state.products.searchproduct"
       @input="$store.dispatch('products/setSearchProduct', $event.target.value)"
     />

@@ -124,9 +124,9 @@ export const productsModule = {
 
 /////////////////
 
-    EDIT_PRODUCT(state, newShopCart) {
-      console.log('EDIT_PRODUCT', state, newShopCart);
-    },
+    // EDIT_PRODUCT(state, newShopCart) {
+    //   console.log('EDIT_PRODUCT', state, newShopCart);
+    // },
   },
   actions: {
     //NewProduct
@@ -143,8 +143,8 @@ export const productsModule = {
     },
 
 /////////////////
-    changeInventory(context, sell) {
-      console.log('changeInventory', context, sell)
-    },
+    // changeInventory(context, sell) {
+    //   console.log('changeInventory', context, sell)
+    // },
   },
 };

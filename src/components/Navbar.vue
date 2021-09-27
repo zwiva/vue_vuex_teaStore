@@ -7,7 +7,7 @@
         class="navbar-brand"
         style="font-family: 'Stick No Bills'"
         to="/"
-        >LATETE <img src="../assets/img/icon_taza.png" height="30px" alt="" />
+        >LATETE <img src="../assets/img/icon_cup.svg" height="30px" alt="" />
       </router-link>
       <button
         class="navbar-toggler"

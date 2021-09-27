@@ -1,7 +1,7 @@
 <template>
   <div class="product__section mx-auto">
-    <h1>Productos</h1>
-    <div class="row justify-content-center">
+    <h1>Productos<img src="../assets/img/icon_cup_logo.svg" height="30px" alt="" /></h1>
+    <div class="row justify-content-center m-2">
       <div
         class=""
         v-for="(product, index) of $store.state.products.allProducts"

@@ -1,6 +1,6 @@
 <template>
   <div class="shopping-car">
-    <h1>Carrito de compra</h1>
+    <h1>Carrito de compra<img v-if="$store.state.shopcart.inCartProducts.length" src="../assets/img/icon_cup_logo.svg" height="30px" alt="" /></h1>
     <div v-if="$store.state.shopcart.inCartProducts.length">
       <ProductCard
         v-for="(product, index) in $store.state.shopcart.inCartProducts"
@@ -27,7 +27,8 @@
         </div>
       </div>
     </div>
-    <div v-else><p>Tu carrito esta vacío.</p></div>
+    <div v-else><p class="empty-cart">Tu carrito esta vacío.<img src="../assets/img/icon_cup_logo.svg" height="" alt="" /></p>
+    </div>
   </div>
 </template>
 
@@ -42,7 +43,7 @@ export default {
     async buyCart() {
       await this.$store.dispatch("shopcart/buyCart");
       alert("Su compra se ha realizado con exito");
-      this.$router.push("/allproducts")
+      this.$router.push("/home")
     },
   },
 };
@@ -61,6 +62,9 @@ export default {
 .buy-cart__button-color:hover {
   color: rgb(206, 111, 127);
   background-color: white;
+}
+.empty-cart {
+  text-align: center;
 }
 @media (min-width: 576px) {
   .buy-cart__section-button {

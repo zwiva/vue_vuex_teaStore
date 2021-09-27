@@ -30,14 +30,8 @@ export const shopcartModule = {
       state.inCartProducts.splice(productIndexFinded, 1);
     },
     CLEAR_CART(state) {
-      console.log('CLEAR_CART -> lo que hay en el carrito', state);
-      // probar dispatch para enviar el state, enviando una accion para modificar el state de products.js
-
-
-
-//////////////////
-      // descomentar despues:
-      // state.inCartProducts = [];
+      // console.log('CLEAR_CART -> lo que hay en el carrito', state);
+      state.inCartProducts = [];
     },
 
   },
@@ -94,8 +88,8 @@ export const shopcartModule = {
 
 ////////////////
 
-    toSellProduct(context, product){
-      console.log('quiero vender', product);
-    }
+    // toSellProduct(context, product){
+    //   console.log('quiero vender', product);
+    // }
   },
 };

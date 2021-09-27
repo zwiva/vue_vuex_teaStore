@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Inventario</h1>
+    <h1>Inventario<img src="../assets/img/icon_cup_logo.svg" height="30px" alt="" /></h1>
     <!-- Add new product -->
     <h3 class="">Ingresar nuevo producto:</h3>
     <hr />
@@ -164,7 +164,14 @@
     <section>
       <h3>Inventario vigente para vender:</h3>
       <hr />
-      <List :allproducts="$store.state.products.allProducts" :listmodehome="false"/>
+      <List
+        :allproducts="$store.state.products.allProducts"
+        :listmodehome="false"
+        :clicktype="'sell'"
+      />
+      <div class="text-center m-4">
+        <button class="goToCart__button" @click="goToCart">Ir a carrito</button>
+      </div>
     </section>
   </div>
 </template>
@@ -194,6 +201,13 @@ export default {
       console.log("vista nuevo producto", this.product);
       this.$store.dispatch("products/createNewProduct", { ...this.product });
     },
+    addProductCart() {
+      // console.log(this.product);
+      this.$store.dispatch("shopcart/addProductToCart", this.product);
+    },
+      goToCart(){
+      this.$router.push("/shoppingcart");
+    }
   },
 };
 </script>

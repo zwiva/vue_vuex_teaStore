@@ -67,6 +67,8 @@ p {
 .main__action-leave-to {
   opacity: 0;
 }
-
+button {
+  color:#6c6c6c;
+}
 
 </style>

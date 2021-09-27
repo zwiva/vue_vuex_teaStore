@@ -1,4 +1,4 @@
-# STATUS: WIP 🚧👩‍💻👷‍♀️
+# STATUS: READY 👩‍💻
 # pre-view: https://teateapot-storevue.netlify.app/  ✨👀✨
 
 # test_vue: vue2.x + router + vuex

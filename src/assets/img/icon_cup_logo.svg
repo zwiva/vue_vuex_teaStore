@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="45"
+   height="48"
+   viewBox="0 0 11.906251 12.700001"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="icon_cup_logo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.4568974"
+     inkscape:cx="151.61904"
+     inkscape:cy="22.846189"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="2560"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-284.29998)">
+    <path
+       style="fill:none;stroke:#ce6f7f;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 2.0380452,290.85522 h 7.7621321 c 0,0 0.112698,5.14592 -3.9457301,5.14592 -3.9657096,0 -3.816402,-5.14592 -3.816402,-5.14592 z"
+       id="path815"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc" />
+    <path
+       style="fill:none;stroke:#ce6f7f;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 9.5838363,292.5944 c 0,0 0.5488907,-0.42128 0.9387437,-0.004 0.389855,0.41788 -1.5414059,1.80886 -1.5414059,1.80886"
+       id="path817"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc" />
+    <path
+       style="fill:none;stroke:#ce6f7f;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3.1130362,296.35436 5.9958981,0.0331"
+       id="path819"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ce6f7f;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 4.8530407,289.02839 c 0,0 -1.0930298,-0.58392 -0.7037704,-1.30659 0.3892593,-0.72268 1.7764095,-1.19535 1.7203732,-2.14218 -0.040784,-0.68912 -0.7384504,-0.62589 -0.7384504,-0.62589"
+       id="path821"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssc" />
+    <path
+       style="fill:none;stroke:#ce6f7f;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 6.4859428,289.73023 c 0,0 -1.247559,-0.41827 -0.8582996,-1.14095 0.3892593,-0.72269 1.7764096,-1.19535 1.7203732,-2.14219 -0.040784,-0.68912 -0.7384503,-0.62589 -0.7384503,-0.62589"
+       id="path821-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssc" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot821"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Quicksand;font-style:normal;font-weight:500;font-size:32px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Quicksand Medium';font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion823"><rect
+           id="rect825"
+           width="76.369057"
+           height="85.915192"
+           x="-17.935158"
+           y="-10.433901" /></flowRegion><flowPara
+         id="flowPara827"></flowPara></flowRoot>  </g>
+</svg>

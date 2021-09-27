@@ -24,9 +24,9 @@
         <p v-if="product.stock > 0" class="card-text">
           Existencias: {{ product.stock }}
         </p>
-        <p v-else>No hay stock</p>
+        <p v-else class="card-text" style="color: red">No hay stock</p>
         <p class="card-text">
-          Precio: $ {{ product.price.toLocaleString('de-DE') }}
+          Precio: $ {{ product.price.toLocaleString("de-DE") }}
 
           <span v-if="product.havediscount" class="card-text"
             >- {{ product.discount }}%
@@ -35,7 +35,7 @@
       </div>
       <div class="row buy__button px-3">
         <button class="buy__button-text" @click="addProductCart">
-          Agregar a carrito 
+         + Agregar a carrito
         </button>
       </div>
     </div>

@@ -4,24 +4,79 @@
       <li
         v-for="product of allproducts"
         :key="product.code"
-        class="item__list p-2 mx-auto"
+        class="item__list mx-auto p-1 m-2"
       >
-        <span>
-          <span class="item__list-stock--title">Categoria:</span>{{ product.category }}
-        </span>
+        <div class="row item__list mx-auto">
+          <div class="col-4 col-item col-item-center">
+            <span>
+              <img :src="product.imgurl" height="60px" class="img__item" />
+            </span>
+          </div>
 
-        <span>
-          <span class="item__list-stock--title"> | Stock:</span> {{ product.stock }}
-        </span>
+          <div class="col-4 col-item col-item-start">
+            <p class="item__list">
+              <span class="item__list--title">Nombre:</span><br />{{
+                product.name
+              }}
+            </p>
 
-        <span v-if="!listmodehome">
-          <span class="item__list-stock--title"> | Color:</span> {{ product.color }}
-        </span>
+            <p class="item__list">
+              <span class="item__list--title">Categoria:</span><br />{{
+                product.category
+              }}
+            </p>
 
-        <button>
-          <span v-if="listmodehome" @click="goToCart">Comprar</span>
-          <span v-else @click="toSell">Vender</span>
-        </button>
+            <p v-if="!listmodehome" class="item__list">
+              <span class="item__list--title">Stock:</span>
+              <br />{{ product.stock }}
+            </p>
+
+            <p class="item__list">
+              <span class="item__list--title">Color:</span>
+              <br />{{ product.color }}
+            </p>
+
+            <p class="item__list">
+              <span class="item__list--title">En oferta:</span>
+              <br />{{ product.havediscount ? "Sí" : "No" }}
+            </p>
+          </div>
+
+          <div v-if="listmodehome" class="col col-item text-center my-2">
+            <button
+              class="col col-item-btn"
+              v-if="listmodehome"
+              @click="seeAll"
+            >
+              Ver opciones
+            </button>
+          </div>
+
+          <div
+            v-if="!listmodehome"
+            class="col col-item text-center my-2 inventory-btn__section"
+          >
+            <div class="row col-item-btn">
+              <button
+                class="col col-item-btn inventory-btn p-1 mr-2"
+                @click="addProductCart(product)"
+              >
+                Agregar a carrito
+              </button>
+
+              <button
+                class="col col-item-btn inventory-btn p-1"
+                @click="goToCart"
+              >
+                Ir a carrito
+              </button>
+            </div>
+
+            <!-- <button class="col col-item-btn">
+              <span @click="goToCart">Ver opciones</span>
+            </button> -->
+          </div>
+        </div>
       </li>
     </ul>
   </div>
@@ -30,20 +85,22 @@
 <script>
 export default {
   name: "List",
-  methods:{
-    goToCart() {
-      this.$router.push("/allproducts")
-    },
-    toSell() {
-      console.log('vender y modificar inventario')
-      // registrar un proceso de compra, metiendo los productos al carrito: lo mismo que el 
-      // $emit('shopcart/...', product)
-    }
-
-  },
   props: {
     allproducts: { type: Array, require: true },
     listmodehome: { type: Boolean, default: true },
+    clicktype: { type: String, require: true },
+  },
+  methods: {
+    seeAll() {
+      this.$router.push("/allproducts");
+    },
+    goToCart() {
+      this.$router.push("/shoppingcart");
+    },
+    addProductCart(product) {
+      // console.log(this.product);
+      this.$store.dispatch("shopcart/addProductToCart", product);
+    },
   },
 };
 </script>
@@ -53,26 +110,73 @@ export default {
   list-style: none;
   background-color: rgb(237, 161, 173);
   color: white;
-  margin: 0.25em;
-  /* border: 0.5px solid pink; */
   width: 90%;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-.item__list-home--title {
+.item__list--title {
+  color: rgb(206, 111, 127);
+  font-size: 0.75em;
+}
+.img__item {
+  height: 80px;
+}
+ul {
+  padding: 0;
+}
+.col-item {
+  justify-content: flex-start;
+  align-self: center;
+}
+.col-item-start {
+  text-align: start;
+  padding: 0;
+}
+.col-item-center {
+  text-align: center;
+  padding: 0;
+}
+p.item__list {
+  margin: 0;
+  width: max-content;
+  font-size: 0.9em;
+}
+.col-item-btn {
+  font-size: 0.9em;
+  width: 120px;
+}
+.col-item-btn:hover {
+  border-color: rgb(206, 111, 127);
   color: rgb(206, 111, 127);
 }
-.item__list-home--content {
-  color: rgb(206, 111, 127);
+.inventory-btn {
+  font-size: 0.8em;
 }
-.item__list-stock--title {
-  color: rgb(206, 111, 127);
+.inventory-btn__section {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
-.item__list-stock--content {
-  color: rgb(206, 111, 127);
+@media (min-width: 375px) {
+  br {
+    display: none;
+  }
+  .img__item {
+    height: 60px;
+  }
+  .inventory-btn__section {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
 @media (min-width: 576px) {
   .item__list {
-    width: 50%;
+    width: 75%;
+  }
+  .col-item-btn {
+    width: 120px;
+  }
+  .inventory-btn__section {
+    margin-left: inherit;
+    margin-right: inherit;
   }
 }
 </style>
